@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BarCode</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="scan_qr_code">Scan QR Code</string>
+    <string name="generate_qr_code">Generate QR Code</string>
+</resources>

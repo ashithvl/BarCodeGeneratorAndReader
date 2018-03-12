@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:nextFocusDown="@id/editViewAddress"
+        android:text="@string/name" />
+
+    <EditText
+        android:id="@+id/editViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTextView"
+        android:inputType="text"
+        android:imeOptions="actionNext" />
+
+    <TextView
+        android:id="@+id/addressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editViewName"
+        android:text="@string/address" />
+
+    <EditText
+        android:id="@+id/editViewAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_below="@id/addressTextView"
+        android:imeOptions="actionDone"
+        android:nextFocusDown="@id/generateQRCode" />
+
+    <ImageView
+        android:id="@+id/qrCode"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/editViewAddress" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/generateQRCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/generate_qr_code" />
+
+        <Button
+            android:id="@+id/scanQRCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/scan_qr_code" />
+
+    </LinearLayout>
+
+</RelativeLayout>
